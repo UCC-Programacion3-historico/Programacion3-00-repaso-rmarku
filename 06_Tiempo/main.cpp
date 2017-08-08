@@ -7,7 +7,7 @@ int main() {
     clock_t begin;
     begin = clock();
 
-    cout << "Comenzando a medir Tiempo\n" << std::endl;
+    cout << "Comenzando a medir Tiempo\n" << endl;
     clock_t end = clock();
 
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
