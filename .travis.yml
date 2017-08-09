@@ -16,7 +16,11 @@ addons:
 before install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-6" CC="gcc-6"; fi
 script:
-  - mkdir build
-  - cd build
+  - mkdir build && cd build
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
-  - ./test/01_POO_test/runTests
+  - ./test/01_POO/01_POO_test
+  - ./test/02_Templates/02_Template_test
+  - ./test/03_Excepciones/03_Excepciones_test
+  - ./test/04_CalcSegundos/04_CalcSegundos_test
+  - ./test/05_OperatorOverload/05_OperatorOverload_test
+  - ./test/06_Tiempo/06_Tiempo_test
